@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.6">
+    <!-- 
+    * @copyright   Copyright (C) 2021 Björn Rudner
+    * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
+    -->
+    <classes>
+        <!-- MonitoringDevice is the BaseClass for Core and Probe -->
+        <class id="MonitoringDevice" _delta="define">
+            <parent>FunctionalCI</parent>
+            <properties>
+                <category>bizmodel,searchable</category>
+                <abstract>true</abstract>
+                <key_type>autoincrement</key_type>
+                <db_table>monitoringdevice</db_table>
+                <db_key_field>id</db_key_field>
+                <db_final_class_field />
+                <naming>
+                    <attributes>
+                        <attribute id="name" />
+                    </attributes>
+                </naming>
+                <fields_semantic>
+                    <state_attribute>status</state_attribute>
+                </fields_semantic>
+                <icon />
+                <reconciliation>
+                    <attributes>
+                        <attribute id="name" />
+                        <attribute id="org_id" />
+                        <attribute id="organization_name" />
+                        <attribute id="finalclass" />
+                    </attributes>
+                </reconciliation>
+                <obsolescence>
+                    <condition>
+                        <![CDATA[status = 'obsolete']]>
+                    </condition>
+                </obsolescence>
+            </properties>
+            <fields>
+                <field id="functionalci_id" xsi:type="AttributeExternalKey">
+                    <sql>functionalci_id</sql>
+                    <filter>SELECT FunctionalCI AS F WHERE (F.org_id = :this-&gt;org_id AND ( F.finalclass = 'Server' OR F.finalclass = 'VirtualMachine' ))</filter>
+                    <dependencies>
+                        <attribute id="org_id" />
+                    </dependencies>
+                    <default_value />
+                    <target_class>FunctionalCI</target_class>
+                    <is_null_allowed>false</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                    <allow_target_creation>false</allow_target_creation>
+                </field>
+                <field id="functionalci_name" xsi:type="AttributeExternalField">
+                    <extkey_attcode>functionalci_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
+                <field id="status" xsi:type="AttributeEnum">
+                    <values>
+                        <value id="production">
+                            <code>production</code>
+                        </value>
+                        <value id="implementation">
+                            <code>implementation</code>
+                        </value>
+                        <value id="stock">
+                            <code>stock</code>
+                        </value>
+                        <value id="obsolete">
+                            <code>obsolete</code>
+                        </value>
+                    </values>
+                    <sql>status</sql>
+                    <default_value>production</default_value>
+                    <is_null_allowed>true</is_null_allowed>
+                    <display_style>list</display_style>
+                </field>
+            </fields>
+            <presentation>
+                <details>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="status">
+                            <rank>30</rank>
+                        </item>
+                        <item id="business_criticity">
+                            <rank>40</rank>
+                        </item>
+                        <item id="move2production">
+                            <rank>50</rank>
+                        </item>
+                        <item id="description">
+                            <rank>60</rank>
+                        </item>
+                        <item id="contacts_list">
+                            <rank>70</rank>
+                        </item>
+                        <item id="documents_list">
+                            <rank>80</rank>
+                        </item>
+                        <item id="applicationsolution_list">
+                            <rank>100</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="status">
+                            <rank>30</rank>
+                        </item>
+                        <item id="business_criticity">
+                            <rank>40</rank>
+                        </item>
+                        <item id="move2production">
+                            <rank>50</rank>
+                        </item>
+                        <item id="functionalci_id">
+                            <rank>100</rank>
+                        </item>
+                    </items>
+                </search>
+                <list>
+                    <items>
+                        <item id="finalclass">
+                            <rank>10</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="status">
+                            <rank>30</rank>
+                        </item>
+                        <item id="business_criticity">
+                            <rank>40</rank>
+                        </item>
+                        <item id="move2production">
+                            <rank>50</rank>
+                        </item>
+                        <item id="functionalci_id">
+                            <rank>100</rank>
+                        </item>
+                    </items>
+                </list>
+            </presentation>
+            <methods />
+        </class>
+        <!-- Monitoring Core Server-->
+        <class id="MonitoringCore" _delta="define">
+            <parent>MonitoringDevice</parent>
+            <properties>
+                <category>bizmodel,searchable</category>
+                <abstract>false</abstract>
+                <key_type>autoincrement</key_type>
+                <db_table>monitoringcore</db_table>
+                <db_key_field>id</db_key_field>
+                <db_final_class_field />
+                <naming>
+                    <attributes>
+                        <attribute id="name" />
+                    </attributes>
+                </naming>
+                <icon>images/monitoringcore.png</icon>
+                <reconciliation>
+                    <attributes>
+                        <attribute id="name" />
+                        <attribute id="org_id" />
+                        <attribute id="organization_name" />
+                        <attribute id="functionalci_id" />
+                    </attributes>
+                </reconciliation>
+                <obsolescence>
+                    <condition>
+                        <![CDATA[status = 'obsolete']]>
+                    </condition>
+                </obsolescence>
+            </properties>
+            <fields>
+                <field id="monitoringprobe_list" xsi:type="AttributeLinkedSet">
+                    <linked_class>MonitoringProbe</linked_class>
+                    <ext_key_to_me>monitoringcore_id</ext_key_to_me>
+                    <edit_mode>in_place</edit_mode>
+                    <tracking_level>all</tracking_level>
+                    <count_min>0</count_min>
+                    <count_max>0</count_max>
+                </field>
+                <field id="functionalci_list" xsi:type="AttributeLinkedSet">
+                    <linked_class>FunctionalCI</linked_class>
+                    <ext_key_to_me>monitoringcore_id</ext_key_to_me>
+                    <edit_mode>add_only</edit_mode>
+                    <tracking_level>all</tracking_level>
+                    <count_min>0</count_min>
+                    <count_max>0</count_max>
+                </field>
+            </fields>
+            <presentation>
+                <details>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="functionalci_id">
+                            <rank>30</rank>
+                        </item>
+                        <item id="status">
+                            <rank>40</rank>
+                        </item>
+                        <item id="business_criticity">
+                            <rank>50</rank>
+                        </item>
+                        <item id="move2production">
+                            <rank>60</rank>
+                        </item>
+                        <item id="description">
+                            <rank>70</rank>
+                        </item>
+                        <item id="contacts_list">
+                            <rank>100</rank>
+                        </item>
+                        <item id="documents_list">
+                            <rank>110</rank>
+                        </item>
+                        <item id="functionalci_list">
+                            <rank>115</rank>
+                        </item>
+                        <item id="applicationsolution_list">
+                            <rank>120</rank>
+                        </item>
+                        <item id="monitoringprobe_list">
+                            <rank>130</rank>
+                        </item>
+                        <item id="providercontracts_list">
+                            <rank>140</rank>
+                        </item>
+                        <item id="services_list">
+                            <rank>150</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="functionalci_id">
+                            <rank>30</rank>
+                        </item>
+                        <item id="business_criticity">
+                            <rank>40</rank>
+                        </item>
+                        <item id="move2production">
+                            <rank>50</rank>
+                        </item>
+                    </items>
+                </search>
+                <list>
+                    <items>
+                        <item id="functionalci_id">
+                            <rank>10</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="status">
+                            <rank>30</rank>
+                        </item>
+                        <item id="business_criticity">
+                            <rank>40</rank>
+                        </item>
+                        <item id="move2production">
+                            <rank>50</rank>
+                        </item>
+                    </items>
+                </list>
+            </presentation>
+            <relations />
+            <methods />
+        </class>
+        <!-- Monitoring Probe -->
+        <class id="MonitoringProbe" _delta="define">
+            <parent>MonitoringDevice</parent>
+            <properties>
+                <category>bizmodel,searchable</category>
+                <abstract>false</abstract>
+                <key_type>autoincrement</key_type>
+                <db_table>monitoringprobe</db_table>
+                <db_key_field>id</db_key_field>
+                <db_final_class_field />
+                <naming>
+                    <attributes>
+                        <attribute id="name" />
+                    </attributes>
+                </naming>
+                <icon>images/monitoringprobe.png</icon>
+                <reconciliation>
+                    <attributes>
+                        <attribute id="name" />
+                        <attribute id="org_id" />
+                        <attribute id="organization_name" />
+                        <attribute id="functionalci_id" />
+                        <attribute id="monitoringprobe_id" />
+                    </attributes>
+                </reconciliation>
+                <order>
+                    <columns>
+                        <column id="name" ascending="true" />
+                    </columns>
+                </order>
+                <obsolescence>
+                    <condition>
+                        <![CDATA[status='obsolete']]>
+                    </condition>
+                </obsolescence>
+            </properties>
+            <fields>
+                <field id="functionalci_list" xsi:type="AttributeLinkedSet">
+                    <linked_class>FunctionalCI</linked_class>
+                    <ext_key_to_me>monitoringprobe_id</ext_key_to_me>
+                    <edit_mode>add_only</edit_mode>
+                    <count_min>0</count_min>
+                    <count_max>0</count_max>
+                </field>
+            </fields>
+            <presentation>
+                <details>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="status">
+                            <rank>25</rank>
+                        </item>
+                        <item id="functionalci_id">
+                            <rank>30</rank>
+                        </item>
+                        <item id="monitoringcore_id">
+                            <rank>40</rank>
+                        </item>
+                        <item id="business_criticity">
+                            <rank>50</rank>
+                        </item>
+                        <item id="move2production">
+                            <rank>60</rank>
+                        </item>
+                        <item id="description">
+                            <rank>70</rank>
+                        </item>
+                        <item id="contacts_list">
+                            <rank>100</rank>
+                        </item>
+                        <item id="documents_list">
+                            <rank>110</rank>
+                        </item>
+                        <item id="functionalci_list">
+                            <rank>120</rank>
+                        </item>
+                        <item id="applicationsolution_list">
+                            <rank>130</rank>
+                        </item>
+                        <item id="providercontracts_list">
+                            <rank>140</rank>
+                        </item>
+                        <item id="services_list">
+                            <rank>150</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="status">
+                            <rank>30</rank>
+                        </item>
+                        <item id="business_criticity">
+                            <rank>40</rank>
+                        </item>
+                        <item id="move2production">
+                            <rank>50</rank>
+                        </item>
+                        <item id="functionalci_id">
+                            <rank>60</rank>
+                        </item>
+                        <item id="monitoringcore_id">
+                            <rank>70</rank>
+                        </item>
+                    </items>
+                </search>
+                <list>
+                    <items>
+                        <item id="org_id">
+                            <rank>10</rank>
+                        </item>
+                        <item id="functionalci_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="monitoringcore_id">
+                            <rank>30</rank>
+                        </item>
+                        <item id="status">
+                            <rank>40</rank>
+                        </item>
+                        <item id="business_criticity">
+                            <rank>50</rank>
+                        </item>
+                    </items>
+                </list>
+            </presentation>
+            <methods />
+            <relations>
+                <relation id="impacts">
+                    <neighbours>
+                        <neighbour id="monitoringcore">
+                            <attribute>monitoringcore_id</attribute>
+                        </neighbour>
+                    </neighbours>
+                </relation>
+            </relations>
+        </class>
+        <!-- Add Monitoring Core and Probe to FunctionalCI and Devices to Monitor -->
+        <class id="FunctionalCI" _delta="must_exist">
+            <fields>
+                <field id="monitoringstatus" xsi:type="AttributeEnum" _delta="define">
+                    <values>
+                        <value id="unknown">
+                            <code>unknown</code>
+                        </value>
+                        <value id="implemented">
+                            <code>implemented</code>
+                        </value>
+                        <value id="required">
+                            <code>required</code>
+                        </value>
+                        <value id="unnecessary">
+                            <code>unnecessary</code>
+                        </value>
+                    </values>
+                    <sql>monitoringstatus</sql>
+                    <default_value>unknown</default_value>
+                    <is_null_allowed>false</is_null_allowed>
+                    <display_style>list</display_style>
+                </field>
+                <field id="monitoringcore_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>monitoringcore_id</sql>
+                    <target_class>MonitoringCore</target_class>
+                    <is_null_allowed>true</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                    <allow_target_creation>false</allow_target_creation>
+                </field>
+                <field id="monitoringcore_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>monitoringcore_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
+                <field id="monitoringprobe_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>monitoringprobe_id</sql>
+                    <default_value />
+                    <target_class>MonitoringProbe</target_class>
+                    <is_null_allowed>true</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                    <allow_target_creation>false</allow_target_creation>
+                </field>
+                <field id="monitoringprobe_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>monitoringprobe_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
+            </fields>
+            <presentation />
+            <relations>
+                <relation id="impacts">
+                    <neighbours>
+                        <neighbour id="monitoringdevice" _delta="define">
+                            <query_up>SELECT FunctionalCI AS u WHERE u.id = :this-&gt;functionalci_id</query_up>
+                            <query_down>SELECT MonitoringDevice AS d WHERE d.functionalci_id = :this-&gt;id</query_down>
+                        </neighbour>
+                    </neighbours>
+                </relation>
+            </relations>
+        </class>
+        <class id="VirtualMachine" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <rank>90</rank>
+                            <items>
+                                <item id="fieldset:Server:Monitoring" _delta="define">
+                                    <rank>5</rank>
+                                    <items>
+                                        <item id="monitoringstatus">
+                                            <rank>5</rank>
+                                        </item>
+                                        <item id="monitoringcore_id">
+                                            <rank>10</rank>
+                                        </item>
+                                        <item id="monitoringprobe_id">
+                                            <rank>20</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="monitoringcore_id" _delta="define">
+                            <rank>60</rank>
+                        </item>
+                        <item id="monitoringprobe_id" _delta="define">
+                            <rank>70</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <class id="NetworkDevice" _delta="must_exist">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <rank>90</rank>
+                            <items>
+                                <item id="fieldset:Server:Monitoring" _delta="define">
+                                    <rank>25</rank>
+                                    <items>
+                                        <item id="monitoringstatus">
+                                            <rank>5</rank>
+                                        </item>
+                                        <item id="monitoringcore_id">
+                                            <rank>10</rank>
+                                        </item>
+                                        <item id="monitoringprobe_id">
+                                            <rank>20</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="monitoringcore_id" _delta="define">
+                            <rank>150</rank>
+                        </item>
+                        <item id="monitoringprobe_id" _delta="define">
+                            <rank>160</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <class id="Server" _delta="must_exist">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2">
+                            <rank>130</rank>
+                            <items>
+                                <item id="fieldset:Server:Monitoring" _delta="define">
+                                    <rank>25</rank>
+                                    <items>
+                                        <item id="monitoringstatus">
+                                            <rank>5</rank>
+                                        </item>
+                                        <item id="monitoringcore_id">
+                                            <rank>10</rank>
+                                        </item>
+                                        <item id="monitoringprobe_id">
+                                            <rank>20</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="monitoringcore_id" _delta="define">
+                            <rank>150</rank>
+                        </item>
+                        <item id="monitoringprobe_id" _delta="define">
+                            <rank>160</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <class id="ApplicationSolution" _delta="must_exist">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="fieldset:Server:Monitoring" _delta="define">
+                            <rank>140</rank>
+                            <items>
+                                <item id="monitoringstatus">
+                                    <rank>5</rank>
+                                </item>
+                                <item id="monitoringcore_id">
+                                    <rank>10</rank>
+                                </item>
+                                <item id="monitoringprobe_id">
+                                    <rank>20</rank>
+                                </item>
+
+                            </items>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="monitoringcore_id" _delta="define">
+                            <rank>50</rank>
+                        </item>
+                        <item id="monitoringprobe_id" _delta="define">
+                            <rank>60</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+    </classes>
+    <menus>
+        <menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
+            <definition>
+                <cells>
+                    <cell id="6" _delta="define">
+                        <rank>1</rank>
+                        <dashlets>
+                            <dashlet id="41" xsi:type="DashletHeaderStatic">
+                                <rank>0</rank>
+                                <title>Menu:ConfigManagement:monitoring</title>
+                            </dashlet>
+                            <dashlet id="42" xsi:type="DashletBadge">
+                                <rank>1</rank>
+                                <class>MonitoringCore</class>
+                            </dashlet>
+                            <dashlet id="43" xsi:type="DashletBadge">
+                                <rank>2</rank>
+                                <class>MonitoringProbe</class>
+                            </dashlet>
+                        </dashlets>
+                    </cell>
+                </cells>
+            </definition>
+        </menu>
+    </menus>
+</itop_design>
