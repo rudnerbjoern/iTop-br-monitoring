@@ -506,7 +506,7 @@
                         <item id="col:col2" _delta="must_exist">
                             <rank>90</rank>
                             <items>
-                                <item id="fieldset:Server:Monitoring" _delta="define">
+                                <item id="fieldset:Server:monitoring" _delta="define">
                                     <rank>5</rank>
                                     <items>
                                         <item id="monitoringstatus">
@@ -543,7 +543,7 @@
                         <item id="col:col2" _delta="must_exist">
                             <rank>90</rank>
                             <items>
-                                <item id="fieldset:Server:Monitoring" _delta="define">
+                                <item id="fieldset:Server:monitoring" _delta="define">
                                     <rank>25</rank>
                                     <items>
                                         <item id="monitoringstatus">
@@ -580,7 +580,7 @@
                         <item id="col:col2">
                             <rank>130</rank>
                             <items>
-                                <item id="fieldset:Server:Monitoring" _delta="define">
+                                <item id="fieldset:Server:monitoring" _delta="define">
                                     <rank>25</rank>
                                     <items>
                                         <item id="monitoringstatus">
@@ -614,7 +614,7 @@
             <presentation>
                 <details>
                     <items>
-                        <item id="fieldset:Server:Monitoring" _delta="define">
+                        <item id="fieldset:Server:monitoring" _delta="define">
                             <rank>140</rank>
                             <items>
                                 <item id="monitoringstatus">
@@ -653,7 +653,7 @@
                         <dashlets>
                             <dashlet id="41" xsi:type="DashletHeaderStatic">
                                 <rank>0</rank>
-                                <title>Menu:ConfigManagement:monitoring</title>
+                                <title>Menu:ConfigManagement:Monitoring</title>
                             </dashlet>
                             <dashlet id="42" xsi:type="DashletBadge">
                                 <rank>1</rank>

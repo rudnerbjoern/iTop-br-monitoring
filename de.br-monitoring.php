@@ -37,4 +37,7 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:MonitoringProbe' => 'Monitoring Probe',
     'Class:MonitoringProbe+' => 'Der Probe-Server zur Überwachung anderer Geräte',
     'Class:MonitoringProbe/Attribute:functionalci_list' => 'FunctionalCI Liste',
+    'Menu:ConfigManagement:Monitoring' => 'Systemüberwachung',
+    'Menu:ConfigManagement:Monitoring+' => 'Systemüberwachung',
+    'Server:monitoring' => 'Systemüberwachung',
 ));
