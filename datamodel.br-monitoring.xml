@@ -654,6 +654,7 @@
                             <dashlet id="41" xsi:type="DashletHeaderStatic">
                                 <rank>0</rank>
                                 <title>Menu:ConfigManagement:Monitoring</title>
+                                <icon>images/monitoring.png</icon>
                             </dashlet>
                             <dashlet id="42" xsi:type="DashletBadge">
                                 <rank>1</rank>
