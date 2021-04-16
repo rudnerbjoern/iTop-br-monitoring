@@ -14,7 +14,7 @@ SetupWebPage::AddModule(
     array(
         // Identification
         //
-        'label' => 'Monitoring Management',
+        'label' => 'Datamodel: Monitoring',
         'category' => 'business',
 
         // Setup
