@@ -23,7 +23,7 @@
                 <fields_semantic>
                     <state_attribute>status</state_attribute>
                 </fields_semantic>
-                <icon />
+                <icon>images/monitoring.png</icon>
                 <reconciliation>
                     <attributes>
                         <attribute id="name" />
@@ -654,7 +654,7 @@
                             <dashlet id="41" xsi:type="DashletHeaderStatic">
                                 <rank>0</rank>
                                 <title>Menu:ConfigManagement:Monitoring</title>
-                                <icon>images/monitoring.png</icon>
+                                <icon>iTop-br-monitoring/images/monitoring.png</icon>
                             </dashlet>
                             <dashlet id="42" xsi:type="DashletBadge">
                                 <rank>1</rank>
