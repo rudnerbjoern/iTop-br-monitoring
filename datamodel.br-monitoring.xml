@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.6">
-    <!-- 
+    <!--
     * @copyright   Copyright (C) 2021 Björn Rudner
     * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
     -->
@@ -536,12 +536,11 @@
                 </search>
             </presentation>
         </class>
-        <class id="NetworkDevice" _delta="must_exist">
+        <class id="NetworkDevice" _delta="if_exists">
             <presentation>
                 <details>
                     <items>
                         <item id="col:col2" _delta="must_exist">
-                            <rank>90</rank>
                             <items>
                                 <item id="fieldset:Server:monitoring" _delta="define">
                                     <rank>25</rank>
@@ -573,7 +572,43 @@
                 </search>
             </presentation>
         </class>
-        <class id="Server" _delta="must_exist">
+        <class id="GenericCommDevice" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:Server:monitoring" _delta="define">
+                                    <rank>25</rank>
+                                    <items>
+                                        <item id="monitoringstatus">
+                                            <rank>5</rank>
+                                        </item>
+                                        <item id="monitoringcore_id">
+                                            <rank>10</rank>
+                                        </item>
+                                        <item id="monitoringprobe_id">
+                                            <rank>20</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="monitoringcore_id" _delta="define">
+                            <rank>170</rank>
+                        </item>
+                        <item id="monitoringprobe_id" _delta="define">
+                            <rank>180</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <class id="Server" _delta="if_exists">
             <presentation>
                 <details>
                     <items>
