@@ -27,7 +27,7 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:FunctionalCI/Attribute:monitoringprobe_id+' => 'The monitoring probe server this device is applied to',
     'Class:FunctionalCI/Attribute:monitoringprobe_id_friendlyname' => 'Monitoring Probe',
     'Class:FunctionalCI/Attribute:monitoringip_id' => 'Monitoring IP',
-    'Class:FunctionalCI/Attribute:monitoringip_id+' => 'The IP address of this CI to be used for monitoring',
+    'Class:FunctionalCI/Attribute:monitoringip_id+' => 'The IP address of this CI to be used for monitoring (must be of status "assigned").',
     'Class:FunctionalCI/Attribute:monitoringip_id_friendlyname' => 'Monitoring IP',
     'Class:MonitoringDevice' => 'Monitoring Device',
     'Class:MonitoringDevice+' => 'The device (core or probe server) used to monitor other devices',

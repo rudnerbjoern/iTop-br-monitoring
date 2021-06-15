@@ -501,7 +501,7 @@
                 </field>
                 <field id="monitoringip_name" xsi:type="AttributeExternalField" _delta="define">
                     <extkey_attcode>monitoringip_id</extkey_attcode>
-                    <target_attcode>name</target_attcode>
+                    <target_attcode>friendlyname</target_attcode>
                 </field>
             </fields>
             <presentation />
