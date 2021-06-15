@@ -486,6 +486,23 @@
                     <extkey_attcode>monitoringprobe_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
+                <field id="monitoringip_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <filter>
+                        <!-- only allocated IP adresses shall be used here -->
+                        <!-- TODO: add logic to only select adresses from the current device -->
+                        <![CDATA[SELECT IPAddress AS ip WHERE ip.status = 'allocated']]>
+                    </filter>
+                    <sql>monitoringip_id</sql>
+                    <default_value />
+                    <target_class>IPAddress</target_class>
+                    <is_null_allowed>true</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                    <allow_target_creation>false</allow_target_creation>
+                </field>
+                <field id="monitoringip_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>monitoringip_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
             </fields>
             <presentation />
             <relations>
@@ -518,6 +535,9 @@
                                         <item id="monitoringprobe_id">
                                             <rank>20</rank>
                                         </item>
+                                        <item id="monitoringip_id">
+                                            <rank>30</rank>
+                                        </item>
                                     </items>
                                 </item>
                             </items>
@@ -536,11 +556,12 @@
                 </search>
             </presentation>
         </class>
-        <class id="NetworkDevice" _delta="if_exists">
+        <class id="NetworkDevice" _delta="must_exist">
             <presentation>
                 <details>
                     <items>
                         <item id="col:col2" _delta="must_exist">
+                            <rank>90</rank>
                             <items>
                                 <item id="fieldset:Server:monitoring" _delta="define">
                                     <rank>25</rank>
@@ -553,6 +574,9 @@
                                         </item>
                                         <item id="monitoringprobe_id">
                                             <rank>20</rank>
+                                        </item>
+                                        <item id="monitoringip_id">
+                                            <rank>30</rank>
                                         </item>
                                     </items>
                                 </item>
@@ -572,43 +596,7 @@
                 </search>
             </presentation>
         </class>
-        <class id="GenericCommDevice" _delta="if_exists">
-            <presentation>
-                <details>
-                    <items>
-                        <item id="col:col2" _delta="must_exist">
-                            <items>
-                                <item id="fieldset:Server:monitoring" _delta="define">
-                                    <rank>25</rank>
-                                    <items>
-                                        <item id="monitoringstatus">
-                                            <rank>5</rank>
-                                        </item>
-                                        <item id="monitoringcore_id">
-                                            <rank>10</rank>
-                                        </item>
-                                        <item id="monitoringprobe_id">
-                                            <rank>20</rank>
-                                        </item>
-                                    </items>
-                                </item>
-                            </items>
-                        </item>
-                    </items>
-                </details>
-                <search>
-                    <items>
-                        <item id="monitoringcore_id" _delta="define">
-                            <rank>170</rank>
-                        </item>
-                        <item id="monitoringprobe_id" _delta="define">
-                            <rank>180</rank>
-                        </item>
-                    </items>
-                </search>
-            </presentation>
-        </class>
-        <class id="Server" _delta="if_exists">
+        <class id="Server" _delta="must_exist">
             <presentation>
                 <details>
                     <items>
@@ -626,6 +614,9 @@
                                         </item>
                                         <item id="monitoringprobe_id">
                                             <rank>20</rank>
+                                        </item>
+                                        <item id="monitoringip_id">
+                                            <rank>30</rank>
                                         </item>
                                     </items>
                                 </item>
@@ -661,7 +652,6 @@
                                 <item id="monitoringprobe_id">
                                     <rank>20</rank>
                                 </item>
-
                             </items>
                         </item>
                     </items>
