@@ -27,7 +27,7 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:FunctionalCI/Attribute:monitoringprobe_id+' => 'Der Probe-Server, dem dieses Gerät zugewiesen ist',
     'Class:FunctionalCI/Attribute:monitoringprobe_id_friendlyname' => 'Monitoring Probe',
     'Class:FunctionalCI/Attribute:monitoringip_id' => 'Monitoring IP',
-    'Class:FunctionalCI/Attribute:monitoringip_id+' => 'IP-Adresse, die zur Überwachung dieses CIs verwendet werden soll (muss den Status "Zugewiesen" haben.',
+    'Class:FunctionalCI/Attribute:monitoringip_id+' => 'IP-Adresse, die zur Überwachung dieses CIs verwendet werden soll (muss den Status \'Zugewiesen\' haben.',
     'Class:FunctionalCI/Attribute:monitoringip_id_friendlyname' => 'Monitoring IP',
     'Class:MonitoringDevice' => 'Monitoring Gerät',
     'Class:MonitoringDevice+' => 'Ein Gerät, dass dazu verwendet wird, andere Geräte zu überwachen',
