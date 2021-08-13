@@ -3,14 +3,14 @@
 /**
  * @copyright   Copyright (C) 2021 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2021-06-15
+ * @version     2021-08-13
  *
  * iTop module definition file
  */
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-monitoring/0.2.0',
+    'br-monitoring/0.4.0',
     array(
         // Identification
         //
@@ -22,6 +22,7 @@ SetupWebPage::AddModule(
         'dependencies' => array(
             'itop-config-mgmt/2.4.0',
             'itop-virtualization-mgmt/0.0.0',
+            'teemip-network-mgmt-extended/0.0.0'
         ),
         'mandatory' => false,
         'visible' => true,

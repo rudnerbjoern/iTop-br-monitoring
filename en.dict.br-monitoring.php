@@ -3,7 +3,7 @@
 /**
  * @copyright   Copyright (C) 2021 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2021-06-15
+ * @version     2021-08-13
  *
  * Localized data
  */
@@ -29,6 +29,16 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:FunctionalCI/Attribute:monitoringip_id' => 'Monitoring IP',
     'Class:FunctionalCI/Attribute:monitoringip_id+' => 'The IP address of this CI to be used for monitoring (must be of status \'assigned\').',
     'Class:FunctionalCI/Attribute:monitoringip_id_friendlyname' => 'Monitoring IP',
+    'Class:NetworkInterface/Attribute:monitoringstatus' => 'Monitoring status',
+    'Class:NetworkInterface/Attribute:monitoringstatus+' => 'Status of the monitoring implementation',
+    'Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown' => 'unknown',
+    'Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown+' => 'Implementation status is unknown',
+    'Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented' => 'implemented',
+    'Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented+' => 'Monitoring is implemented',
+    'Class:NetworkInterface/Attribute:monitoringstatus/Value:required' => 'required',
+    'Class:NetworkInterface/Attribute:monitoringstatus/Value:required+' => 'Monitoring is required',
+    'Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary' => 'unnecessary',
+    'Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary+' => 'Monitoring is not necessary',
     'Class:MonitoringDevice' => 'Monitoring Device',
     'Class:MonitoringDevice+' => 'The device (core or probe server) used to monitor other devices',
     'Class:MonitoringDevice/Attribute:functionalci_id' => 'Monitoring Server',
