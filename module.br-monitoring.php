@@ -10,7 +10,7 @@
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-monitoring/0.5.0',
+    'br-monitoring/0.6.0',
     array(
         // Identification
         //

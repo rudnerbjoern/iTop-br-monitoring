@@ -785,6 +785,12 @@
                     <is_null_allowed>false</is_null_allowed>
                     <display_style>list</display_style>
                 </field>
+                <field id="monitoringparameter" xsi:type="AttributeString" _delta="define">
+                    <sql>monitoringparameter</sql>
+                    <is_null_allowed>true</is_null_allowed>
+                    <default_value />
+                    <!-- TODO: <validation_pattern>^.*$</validation_pattern> -->
+                </field>
             </fields>
         </class>
         <class id="AggregateLink" _delta="must_exist">
@@ -797,6 +803,9 @@
                                     <items>
                                         <item id="monitoringstatus" _delta="define">
                                             <rank>55</rank>
+                                        </item>
+                                        <item id="monitoringparameter" _delta="define">
+                                            <rank>56</rank>
                                         </item>
                                     </items>
                                 </item>
@@ -816,6 +825,9 @@
                                     <items>
                                         <item id="monitoringstatus" _delta="define">
                                             <rank>25</rank>
+                                        </item>
+                                        <item id="monitoringparameter" _delta="define">
+                                            <rank>27</rank>
                                         </item>
                                     </items>
                                 </item>

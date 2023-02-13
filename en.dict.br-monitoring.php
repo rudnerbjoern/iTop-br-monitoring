@@ -41,6 +41,8 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:NetworkInterface/Attribute:monitoringstatus/Value:required+' => 'Monitoring is required',
     'Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary' => 'unnecessary',
     'Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary+' => 'Monitoring is not necessary',
+    'Class:NetworkInterface/Attribute:monitoringparameter' => 'Monitoring Parameter',
+    'Class:NetworkInterface/Attribute:monitoringparameter+' => 'Parameters to be used within the monitoring application',
     'Class:MonitoringDevice' => 'Monitoring Device',
     'Class:MonitoringDevice+' => 'The device (core or probe server) used to monitor other devices',
     'Class:MonitoringDevice/Attribute:functionalci_id' => 'Monitoring Server',

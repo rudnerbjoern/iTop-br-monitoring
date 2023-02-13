@@ -41,6 +41,8 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:NetworkInterface/Attribute:monitoringstatus/Value:required+' => 'Eine Überwachung ist erforderlich',
     'Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary' => 'unnötig',
     'Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary+' => 'Eine Überwachung ist nicht erforderlich',
+    'Class:NetworkInterface/Attribute:monitoringparameter' => 'Monitoring Parameter',
+    'Class:NetworkInterface/Attribute:monitoringparameter+' => 'Parameter zur Verwendung innerhalb der Monitoring-Software',
     'Class:MonitoringDevice' => 'Monitoring Gerät',
     'Class:MonitoringDevice+' => 'Ein Gerät, dass dazu verwendet wird, andere Geräte zu überwachen',
     'Class:MonitoringDevice/Attribute:functionalci_id' => 'Monitoring Server',
