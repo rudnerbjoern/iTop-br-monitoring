@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright   Copyright (C) 2021 Björn Rudner
+ * @copyright   Copyright (C) 2021-2023 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2021-08-13
+ * @version     2023-02-13
  *
  * Localized data
  */
@@ -20,6 +20,8 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:FunctionalCI/Attribute:monitoringstatus/Value:required+' => 'Eine Überwachung ist erforderlich',
     'Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary' => 'unnötig',
     'Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary+' => 'Eine Überwachung ist nicht erforderlich',
+    'Class:FunctionalCI/Attribute:monitoringparameter' => 'Monitoring Parameter',
+    'Class:FunctionalCI/Attribute:monitoringparameter+' => 'Parameter zur Verwendung innerhalb der Monitoring-Software',
     'Class:FunctionalCI/Attribute:monitoringcore_id' => 'Monitoring Core',
     'Class:FunctionalCI/Attribute:monitoringcore_id+' => 'Der Core-Server, dem dieses Gerät zugewiesen ist',
     'Class:FunctionalCI/Attribute:monitoringcore_id_friendlyname' => 'Monitoring Core',

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">
     <!--
-    * @copyright   Copyright (C) 2021 Björn Rudner
+    * @copyright   Copyright (C) 2021-2023 Björn Rudner
     * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
     -->
     <classes>
@@ -463,6 +463,12 @@
                     <is_null_allowed>false</is_null_allowed>
                     <display_style>list</display_style>
                 </field>
+                <field id="monitoringparameter" xsi:type="AttributeString" _delta="define">
+                    <sql>monitoringparameter</sql>
+                    <is_null_allowed>true</is_null_allowed>
+                    <default_value />
+                    <!-- TODO: <validation_pattern>^.*$</validation_pattern> -->
+                </field>
                 <field id="monitoringcore_id" xsi:type="AttributeExternalKey" _delta="define">
                     <sql>monitoringcore_id</sql>
                     <target_class>MonitoringCore</target_class>
@@ -531,6 +537,9 @@
                                         <item id="monitoringstatus">
                                             <rank>5</rank>
                                         </item>
+                                        <item id="monitoringparameter">
+                                            <rank>7</rank>
+                                        </item>
                                         <item id="monitoringcore_id">
                                             <rank>10</rank>
                                         </item>
@@ -570,6 +579,9 @@
                                     <items>
                                         <item id="monitoringstatus">
                                             <rank>5</rank>
+                                        </item>
+                                        <item id="monitoringparameter">
+                                            <rank>7</rank>
                                         </item>
                                         <item id="monitoringcore_id">
                                             <rank>10</rank>
@@ -611,6 +623,9 @@
                                         <item id="monitoringstatus">
                                             <rank>5</rank>
                                         </item>
+                                        <item id="monitoringparameter">
+                                            <rank>7</rank>
+                                        </item>
                                         <item id="monitoringcore_id">
                                             <rank>10</rank>
                                         </item>
@@ -648,6 +663,9 @@
                                 <item id="monitoringstatus">
                                     <rank>5</rank>
                                 </item>
+                                <item id="monitoringparameter">
+                                    <rank>7</rank>
+                                </item>
                                 <item id="monitoringcore_id">
                                     <rank>10</rank>
                                 </item>
@@ -681,6 +699,9 @@
                         <item id="monitoringstatus" _delta="define">
                             <rank>45</rank>
                         </item>
+                        <item id="monitoringparameter" _delta="define">
+                            <rank>46</rank>
+                        </item>
                     </items>
                 </details>
             </presentation>
@@ -691,6 +712,9 @@
                     <items>
                         <item id="monitoringstatus" _delta="define">
                             <rank>45</rank>
+                        </item>
+                        <item id="monitoringparameter" _delta="define">
+                            <rank>46</rank>
                         </item>
                     </items>
                 </details>
@@ -703,6 +727,9 @@
                         <item id="monitoringstatus" _delta="define">
                             <rank>45</rank>
                         </item>
+                        <item id="monitoringparameter" _delta="define">
+                            <rank>46</rank>
+                        </item>
                     </items>
                 </details>
             </presentation>
@@ -714,6 +741,9 @@
                         <item id="monitoringstatus" _delta="define">
                             <rank>45</rank>
                         </item>
+                        <item id="monitoringparameter" _delta="define">
+                            <rank>46</rank>
+                        </item>
                     </items>
                 </details>
             </presentation>
@@ -724,6 +754,9 @@
                     <items>
                         <item id="monitoringstatus" _delta="define">
                             <rank>55</rank>
+                        </item>
+                        <item id="monitoringparameter" _delta="define">
+                            <rank>46</rank>
                         </item>
                     </items>
                 </details>

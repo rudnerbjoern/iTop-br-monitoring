@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @copyright   Copyright (C) 2021 Björn Rudner
+ * @copyright   Copyright (C) 2021-2023 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2021-08-13
+ * @version     2023-02-13
  *
  * Localized data
  */
 
 Dict::Add('EN US', 'English', 'English', array(
     // Dictionary entries go here
-    'Class:FunctionalCI/Attribute:monitoringstatus' => 'Monitoring status',
+    'Class:FunctionalCI/Attribute:monitoringstatus' => 'Monitoring Status',
     'Class:FunctionalCI/Attribute:monitoringstatus+' => 'Status of the monitoring implementation',
     'Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown' => 'unknown',
     'Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown+' => 'Implementation status is unknown',
@@ -20,6 +20,8 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:FunctionalCI/Attribute:monitoringstatus/Value:required+' => 'Monitoring is required',
     'Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary' => 'unnecessary',
     'Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary+' => 'Monitoring is not necessary',
+    'Class:FunctionalCI/Attribute:monitoringparameter' => 'Monitoring Parameter',
+    'Class:FunctionalCI/Attribute:monitoringparameter+' => 'Parameters to be used within the monitoring application',
     'Class:FunctionalCI/Attribute:monitoringcore_id' => 'Monitoring Core',
     'Class:FunctionalCI/Attribute:monitoringcore_id+' => 'The monitoring core server this device is applied to',
     'Class:FunctionalCI/Attribute:monitoringcore_id_friendlyname' => 'Monitoring Core',
