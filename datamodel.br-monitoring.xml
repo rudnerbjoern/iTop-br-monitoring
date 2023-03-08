@@ -864,4 +864,108 @@
             </definition>
         </menu>
     </menus>
+    <dictionaries>
+        <dictionary id="EN US">
+            <entries>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus" _delta="define">Monitoring Status</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus+" _delta="define">Status of the monitoring implementation</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown" _delta="define">unknown</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown+" _delta="define">Implementation status is unknown</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:implemented" _delta="define">implemented</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:implemented+" _delta="define">Monitoring is implemented</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:required" _delta="define">required</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:required+" _delta="define">Monitoring is required</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary" _delta="define">unnecessary</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary+" _delta="define">Monitoring is not necessary</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringparameter" _delta="define">Monitoring Parameter</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringparameter+" _delta="define">Parameters to be used within the monitoring application</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringcore_id" _delta="define">Monitoring Core</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringcore_id+" _delta="define">The monitoring core server this device is applied to</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringcore_id_friendlyname" _delta="define">Monitoring Core</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id" _delta="define">Monitoring Probe</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id+" _delta="define">The monitoring probe server this device is applied to</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id_friendlyname" _delta="define">Monitoring Probe</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringip_id" _delta="define">Monitoring IP</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringip_id+" _delta="define">The IP address of this CI to be used for monitoring (must be of status 'assigned').</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringip_id_friendlyname" _delta="define">Monitoring IP</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus" _delta="define">Monitoring status</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus+" _delta="define">Status of the monitoring implementation</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown" _delta="define">unknown</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown+" _delta="define">Implementation status is unknown</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented" _delta="define">implemented</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented+" _delta="define">Monitoring is implemented</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:required" _delta="define">required</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:required+" _delta="define">Monitoring is required</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary" _delta="define">unnecessary</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary+" _delta="define">Monitoring is not necessary</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringparameter" _delta="define">Monitoring Parameter</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringparameter+" _delta="define">Parameters to be used within the monitoring application</entry>
+                <entry id="Class:MonitoringDevice" _delta="define">Monitoring Device</entry>
+                <entry id="Class:MonitoringDevice+" _delta="define">The device (core or probe server) used to monitor other devices</entry>
+                <entry id="Class:MonitoringDevice/Attribute:functionalci_id" _delta="define">Monitoring Server</entry>
+                <entry id="Class:MonitoringCore" _delta="define">Monitoring Core</entry>
+                <entry id="Class:MonitoringCore+" _delta="define">The core server used to monitor other devices</entry>
+                <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
+                <entry id="Class:MonitoringCore/Attribute:functionalci_list" _delta="define">FunctionalCI list</entry>
+                <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
+                <entry id="Class:MonitoringProbe" _delta="define">Monitoring Probe</entry>
+                <entry id="Class:MonitoringProbe+" _delta="define">The probe server used to monitor other devices</entry>
+                <entry id="Class:MonitoringProbe/Attribute:functionalci_list" _delta="define">FunctionalCI list</entry>
+                <entry id="Menu:ConfigManagement:Monitoring" _delta="define">Monitoring</entry>
+                <entry id="Menu:ConfigManagement:Monitoring+" _delta="define">Systems monitoring</entry>
+                <entry id="Server:monitoring" _delta="define">Monitoring</entry>
+            </entries>
+        </dictionary>
+        <dictionary id="DE DE">
+            <entries>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus" _delta="define">Monitoring Status</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus+" _delta="define">Status der Implementierung der Überwachung</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown" _delta="define">unbekannt</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown+" _delta="define">unbekannt</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:implemented" _delta="define">implementiert</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:implemented+" _delta="define">Eine Überwachung ist implementiert</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:required" _delta="define">erforderlich</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:required+" _delta="define">Eine Überwachung ist erforderlich</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary" _delta="define">unnötig</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary+" _delta="define">Eine Überwachung ist nicht erforderlich</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringparameter" _delta="define">Monitoring Parameter</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringparameter+" _delta="define">Parameter zur Verwendung innerhalb der Monitoring-Software</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringcore_id" _delta="define">Monitoring Core</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringcore_id+" _delta="define">Der Core-Server, dem dieses Gerät zugewiesen ist</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringcore_id_friendlyname" _delta="define">Monitoring Core</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id" _delta="define">Monitoring Probe</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id+" _delta="define">Der Probe-Server, dem dieses Gerät zugewiesen ist</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id_friendlyname" _delta="define">Monitoring Probe</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringip_id" _delta="define">Monitoring IP</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringip_id+" _delta="define">IP-Adresse, die zur Überwachung dieses CIs verwendet werden soll (muss den Status 'Zugewiesen' haben.</entry>
+                <entry id="Class:FunctionalCI/Attribute:monitoringip_id_friendlyname" _delta="define">Monitoring IP</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus" _delta="define">Monitoring Status</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus+" _delta="define">Status der Implementierung der Überwachung</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown" _delta="define">unbekannt</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown+" _delta="define">unbekannt</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented" _delta="define">implementiert</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented+" _delta="define">Eine Überwachung ist implementiert</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:required" _delta="define">erforderlich</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:required+" _delta="define">Eine Überwachung ist erforderlich</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary" _delta="define">unnötig</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary+" _delta="define">Eine Überwachung ist nicht erforderlich</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringparameter" _delta="define">Monitoring Parameter</entry>
+                <entry id="Class:NetworkInterface/Attribute:monitoringparameter+" _delta="define">Parameter zur Verwendung innerhalb der Monitoring-Software</entry>
+                <entry id="Class:MonitoringDevice" _delta="define">Monitoring Gerät</entry>
+                <entry id="Class:MonitoringDevice+" _delta="define">Ein Gerät, dass dazu verwendet wird, andere Geräte zu überwachen</entry>
+                <entry id="Class:MonitoringDevice/Attribute:functionalci_id" _delta="define">Monitoring Server</entry>
+                <entry id="Class:MonitoringCore" _delta="define">Monitoring Core</entry>
+                <entry id="Class:MonitoringCore+" _delta="define">Der Core-Server zur Überwachung anderer Geräte</entry>
+                <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
+                <entry id="Class:MonitoringCore/Attribute:functionalci_list" _delta="define">FunctionalCI Liste</entry>
+                <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
+                <entry id="Class:MonitoringProbe" _delta="define">Monitoring Probe</entry>
+                <entry id="Class:MonitoringProbe+" _delta="define">Der Probe-Server zur Überwachung anderer Geräte</entry>
+                <entry id="Class:MonitoringProbe/Attribute:functionalci_list" _delta="define">FunctionalCI Liste</entry>
+                <entry id="Menu:ConfigManagement:Monitoring" _delta="define">Systemüberwachung</entry>
+                <entry id="Menu:ConfigManagement:Monitoring+" _delta="define">Systemüberwachung</entry>
+                <entry id="Server:monitoring" _delta="define">Systemüberwachung</entry>
+            </entries>
+        </dictionary>
+    </dictionaries>
 </itop_design>
