@@ -907,7 +907,6 @@
                 <entry id="Class:MonitoringCore+" _delta="define">The core server used to monitor other devices</entry>
                 <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
                 <entry id="Class:MonitoringCore/Attribute:functionalci_list" _delta="define">FunctionalCI list</entry>
-                <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
                 <entry id="Class:MonitoringProbe" _delta="define">Monitoring Probe</entry>
                 <entry id="Class:MonitoringProbe+" _delta="define">The probe server used to monitor other devices</entry>
                 <entry id="Class:MonitoringProbe/Attribute:functionalci_list" _delta="define">FunctionalCI list</entry>
@@ -958,7 +957,6 @@
                 <entry id="Class:MonitoringCore+" _delta="define">Der Core-Server zur Überwachung anderer Geräte</entry>
                 <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
                 <entry id="Class:MonitoringCore/Attribute:functionalci_list" _delta="define">FunctionalCI Liste</entry>
-                <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
                 <entry id="Class:MonitoringProbe" _delta="define">Monitoring Probe</entry>
                 <entry id="Class:MonitoringProbe+" _delta="define">Der Probe-Server zur Überwachung anderer Geräte</entry>
                 <entry id="Class:MonitoringProbe/Attribute:functionalci_list" _delta="define">FunctionalCI Liste</entry>
