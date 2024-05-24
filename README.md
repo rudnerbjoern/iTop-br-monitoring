@@ -1,6 +1,6 @@
 # iTop: br-monitoring
 
-Copyright (c) 2021-2022 Björn Rudner
+Copyright (c) 2021-2024 Björn Rudner
 [![License](https://img.shields.io/github/license/rudnerbjoern/iTop-br-monitoring)](https://github.com/rudnerbjoern/iTop-br-monitoring/blob/main/LICENSE)
 
 ## What?
