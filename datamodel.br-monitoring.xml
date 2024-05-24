@@ -194,6 +194,14 @@
                     <count_min>0</count_min>
                     <count_max>0</count_max>
                 </field>
+                <field id="functionalci_list" xsi:type="AttributeLinkedSet">
+                    <linked_class>FunctionalCI</linked_class>
+                    <ext_key_to_me>monitoringcore_id</ext_key_to_me>
+                    <edit_mode>add_only</edit_mode>
+                    <tracking_level>all</tracking_level>
+                    <count_min>0</count_min>
+                    <count_max>0</count_max>
+                </field>
             </fields>
             <presentation>
                 <details>
@@ -203,6 +211,9 @@
                         </item>
                         <item id="org_id">
                             <rank>20</rank>
+                        </item>
+                        <item id="functionalci_id">
+                            <rank>30</rank>
                         </item>
                         <item id="status">
                             <rank>40</rank>
@@ -247,6 +258,9 @@
                         <item id="org_id">
                             <rank>20</rank>
                         </item>
+                        <item id="functionalci_id">
+                            <rank>30</rank>
+                        </item>
                         <item id="business_criticity">
                             <rank>40</rank>
                         </item>
@@ -257,6 +271,9 @@
                 </search>
                 <list>
                     <items>
+                        <item id="functionalci_id">
+                            <rank>10</rank>
+                        </item>
                         <item id="org_id">
                             <rank>20</rank>
                         </item>
@@ -452,6 +469,17 @@
                     <default_value />
                     <!-- TODO: <validation_pattern>^.*$</validation_pattern> -->
                 </field>
+                <field id="monitoringcore_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>monitoringcore_id</sql>
+                    <target_class>MonitoringCore</target_class>
+                    <is_null_allowed>true</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                    <allow_target_creation>false</allow_target_creation>
+                </field>
+                <field id="monitoringcore_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>monitoringcore_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
                 <field id="monitoringprobe_id" xsi:type="AttributeExternalKey" _delta="define">
                     <sql>monitoringprobe_id</sql>
                     <default_value />
@@ -494,7 +522,7 @@
                 </relation>
             </relations>
         </class>
-        <!-- **************************** Change classes to implement MonitoringProbe **************************** -->
+        <!-- ********************************* Include Monitroing in classes ********************************* -->
         <class id="VirtualMachine" _delta="if_exists">
             <presentation>
                 <details>
@@ -511,6 +539,9 @@
                                         <item id="monitoringparameter">
                                             <rank>7</rank>
                                         </item>
+                                        <item id="monitoringcore_id">
+                                            <rank>10</rank>
+                                        </item>
                                         <item id="monitoringprobe_id">
                                             <rank>20</rank>
                                         </item>
@@ -525,6 +556,9 @@
                 </details>
                 <search>
                     <items>
+                        <item id="monitoringcore_id" _delta="define">
+                            <rank>60</rank>
+                        </item>
                         <item id="monitoringprobe_id" _delta="define">
                             <rank>70</rank>
                         </item>
@@ -548,6 +582,9 @@
                                         <item id="monitoringparameter">
                                             <rank>7</rank>
                                         </item>
+                                        <item id="monitoringcore_id">
+                                            <rank>10</rank>
+                                        </item>
                                         <item id="monitoringprobe_id">
                                             <rank>20</rank>
                                         </item>
@@ -562,6 +599,9 @@
                 </details>
                 <search>
                     <items>
+                        <item id="monitoringcore_id" _delta="define">
+                            <rank>150</rank>
+                        </item>
                         <item id="monitoringprobe_id" _delta="define">
                             <rank>160</rank>
                         </item>
@@ -585,6 +625,9 @@
                                         <item id="monitoringparameter">
                                             <rank>7</rank>
                                         </item>
+                                        <item id="monitoringcore_id">
+                                            <rank>10</rank>
+                                        </item>
                                         <item id="monitoringprobe_id">
                                             <rank>20</rank>
                                         </item>
@@ -599,6 +642,9 @@
                 </details>
                 <search>
                     <items>
+                        <item id="monitoringcore_id" _delta="define">
+                            <rank>150</rank>
+                        </item>
                         <item id="monitoringprobe_id" _delta="define">
                             <rank>160</rank>
                         </item>
@@ -619,6 +665,9 @@
                                 <item id="monitoringparameter">
                                     <rank>7</rank>
                                 </item>
+                                <item id="monitoringcore_id">
+                                    <rank>10</rank>
+                                </item>
                                 <item id="monitoringprobe_id">
                                     <rank>20</rank>
                                 </item>
@@ -631,6 +680,9 @@
                 </details>
                 <search>
                     <items>
+                        <item id="monitoringcore_id" _delta="define">
+                            <rank>50</rank>
+                        </item>
                         <item id="monitoringprobe_id" _delta="define">
                             <rank>60</rank>
                         </item>
@@ -811,100 +863,4 @@
             </definition>
         </menu>
     </menus>
-    <dictionaries>
-        <dictionary id="EN US">
-            <entries>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus" _delta="define">Monitoring Status</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus+" _delta="define">Status of the monitoring implementation</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown" _delta="define">unknown</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown+" _delta="define">Implementation status is unknown</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:implemented" _delta="define">implemented</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:implemented+" _delta="define">Monitoring is implemented</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:required" _delta="define">required</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:required+" _delta="define">Monitoring is required</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary" _delta="define">unnecessary</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary+" _delta="define">Monitoring is not necessary</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringparameter" _delta="define">Monitoring Parameter</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringparameter+" _delta="define">Parameters to be used within the monitoring application</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id" _delta="define">Monitoring Probe</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id+" _delta="define">The monitoring probe server this device is applied to</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id_friendlyname" _delta="define">Monitoring Probe</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringip_id" _delta="define">Monitoring IP</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringip_id+" _delta="define">The IP address of this CI to be used for monitoring (must be of status 'assigned').</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringip_id_friendlyname" _delta="define">Monitoring IP</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus" _delta="define">Monitoring status</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus+" _delta="define">Status of the monitoring implementation</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown" _delta="define">unknown</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown+" _delta="define">Implementation status is unknown</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented" _delta="define">implemented</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented+" _delta="define">Monitoring is implemented</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:required" _delta="define">required</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:required+" _delta="define">Monitoring is required</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary" _delta="define">unnecessary</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary+" _delta="define">Monitoring is not necessary</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringparameter" _delta="define">Monitoring Parameter</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringparameter+" _delta="define">Parameters to be used within the monitoring application</entry>
-                <entry id="Class:MonitoringDevice" _delta="define">Monitoring Device</entry>
-                <entry id="Class:MonitoringDevice+" _delta="define">The device (core or probe server) used to monitor other devices</entry>
-                <entry id="Class:MonitoringDevice/Attribute:functionalci_id" _delta="define">Monitoring Server</entry>
-                <entry id="Class:MonitoringCore" _delta="define">Monitoring Core</entry>
-                <entry id="Class:MonitoringCore+" _delta="define">The core server used to monitor other devices</entry>
-                <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
-                <entry id="Class:MonitoringCore/Attribute:functionalci_list" _delta="define">FunctionalCI list</entry>
-                <entry id="Class:MonitoringProbe" _delta="define">Monitoring Probe</entry>
-                <entry id="Class:MonitoringProbe+" _delta="define">The probe server used to monitor other devices</entry>
-                <entry id="Class:MonitoringProbe/Attribute:functionalci_list" _delta="define">FunctionalCI list</entry>
-                <entry id="Menu:ConfigManagement:Monitoring" _delta="define">Monitoring</entry>
-                <entry id="Menu:ConfigManagement:Monitoring+" _delta="define">Systems monitoring</entry>
-                <entry id="Server:monitoring" _delta="define">Monitoring</entry>
-            </entries>
-        </dictionary>
-        <dictionary id="DE DE">
-            <entries>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus" _delta="define">Monitoring Status</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus+" _delta="define">Status der Implementierung der Überwachung</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown" _delta="define">unbekannt</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unknown+" _delta="define">unbekannt</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:implemented" _delta="define">implementiert</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:implemented+" _delta="define">Eine Überwachung ist implementiert</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:required" _delta="define">erforderlich</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:required+" _delta="define">Eine Überwachung ist erforderlich</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary" _delta="define">unnötig</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringstatus/Value:unnecessary+" _delta="define">Eine Überwachung ist nicht erforderlich</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringparameter" _delta="define">Monitoring Parameter</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringparameter+" _delta="define">Parameter zur Verwendung innerhalb der Monitoring-Software</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id" _delta="define">Monitoring Probe</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id+" _delta="define">Der Probe-Server, dem dieses Gerät zugewiesen ist</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringprobe_id_friendlyname" _delta="define">Monitoring Probe</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringip_id" _delta="define">Monitoring IP</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringip_id+" _delta="define">IP-Adresse, die zur Überwachung dieses CIs verwendet werden soll (muss den Status 'Zugewiesen' haben.</entry>
-                <entry id="Class:FunctionalCI/Attribute:monitoringip_id_friendlyname" _delta="define">Monitoring IP</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus" _delta="define">Monitoring Status</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus+" _delta="define">Status der Implementierung der Überwachung</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown" _delta="define">unbekannt</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unknown+" _delta="define">unbekannt</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented" _delta="define">implementiert</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:implemented+" _delta="define">Eine Überwachung ist implementiert</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:required" _delta="define">erforderlich</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:required+" _delta="define">Eine Überwachung ist erforderlich</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary" _delta="define">unnötig</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringstatus/Value:unnecessary+" _delta="define">Eine Überwachung ist nicht erforderlich</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringparameter" _delta="define">Monitoring Parameter</entry>
-                <entry id="Class:NetworkInterface/Attribute:monitoringparameter+" _delta="define">Parameter zur Verwendung innerhalb der Monitoring-Software</entry>
-                <entry id="Class:MonitoringDevice" _delta="define">Monitoring Gerät</entry>
-                <entry id="Class:MonitoringDevice+" _delta="define">Ein Gerät, dass dazu verwendet wird, andere Geräte zu überwachen</entry>
-                <entry id="Class:MonitoringDevice/Attribute:functionalci_id" _delta="define">Monitoring Server</entry>
-                <entry id="Class:MonitoringCore" _delta="define">Monitoring Core</entry>
-                <entry id="Class:MonitoringCore+" _delta="define">Der Core-Server zur Überwachung anderer Geräte</entry>
-                <entry id="Class:MonitoringCore/Attribute:monitoringprobe_list" _delta="define">Monitoring Probes</entry>
-                <entry id="Class:MonitoringCore/Attribute:functionalci_list" _delta="define">FunctionalCI Liste</entry>
-                <entry id="Class:MonitoringProbe" _delta="define">Monitoring Probe</entry>
-                <entry id="Class:MonitoringProbe+" _delta="define">Der Probe-Server zur Überwachung anderer Geräte</entry>
-                <entry id="Class:MonitoringProbe/Attribute:functionalci_list" _delta="define">FunctionalCI Liste</entry>
-                <entry id="Menu:ConfigManagement:Monitoring" _delta="define">Systemüberwachung</entry>
-                <entry id="Menu:ConfigManagement:Monitoring+" _delta="define">Systemüberwachung</entry>
-                <entry id="Server:monitoring" _delta="define">Systemüberwachung</entry>
-            </entries>
-        </dictionary>
-    </dictionaries>
 </itop_design>
