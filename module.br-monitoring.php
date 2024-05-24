@@ -29,7 +29,9 @@ SetupWebPage::AddModule(
 
         // Components
         //
-        'datamodel' => array(),
+        'datamodel' => array(
+            'model.br-monitoring.php'
+        ),
         'webservice' => array(),
         'data.struct' => array(
             // add your 'structure' definition XML files here,
