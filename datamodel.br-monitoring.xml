@@ -318,6 +318,17 @@
                 </obsolescence>
             </properties>
             <fields>
+                <field id="monitoringcore_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>monitoringcore_id</sql>
+                    <target_class>MonitoringCore</target_class>
+                    <is_null_allowed>true</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                    <allow_target_creation>false</allow_target_creation>
+                </field>
+                <field id="monitoringcore_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>monitoringcore_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
                 <field id="functionalci_list" xsi:type="AttributeLinkedSet">
                     <linked_class>FunctionalCI</linked_class>
                     <ext_key_to_me>monitoringprobe_id</ext_key_to_me>
