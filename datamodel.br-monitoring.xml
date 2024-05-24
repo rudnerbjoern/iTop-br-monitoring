@@ -194,14 +194,6 @@
                     <count_min>0</count_min>
                     <count_max>0</count_max>
                 </field>
-                <field id="functionalci_list" xsi:type="AttributeLinkedSet">
-                    <linked_class>FunctionalCI</linked_class>
-                    <ext_key_to_me>monitoringcore_id</ext_key_to_me>
-                    <edit_mode>add_only</edit_mode>
-                    <tracking_level>all</tracking_level>
-                    <count_min>0</count_min>
-                    <count_max>0</count_max>
-                </field>
             </fields>
             <presentation>
                 <details>
@@ -232,9 +224,6 @@
                         </item>
                         <item id="documents_list">
                             <rank>110</rank>
-                        </item>
-                        <item id="functionalci_list">
-                            <rank>115</rank>
                         </item>
                         <item id="applicationsolution_list">
                             <rank>120</rank>
@@ -469,17 +458,6 @@
                     <default_value />
                     <!-- TODO: <validation_pattern>^.*$</validation_pattern> -->
                 </field>
-                <field id="monitoringcore_id" xsi:type="AttributeExternalKey" _delta="define">
-                    <sql>monitoringcore_id</sql>
-                    <target_class>MonitoringCore</target_class>
-                    <is_null_allowed>true</is_null_allowed>
-                    <on_target_delete>DEL_MANUAL</on_target_delete>
-                    <allow_target_creation>false</allow_target_creation>
-                </field>
-                <field id="monitoringcore_name" xsi:type="AttributeExternalField" _delta="define">
-                    <extkey_attcode>monitoringcore_id</extkey_attcode>
-                    <target_attcode>name</target_attcode>
-                </field>
                 <field id="monitoringprobe_id" xsi:type="AttributeExternalKey" _delta="define">
                     <sql>monitoringprobe_id</sql>
                     <default_value />
@@ -539,9 +517,6 @@
                                         <item id="monitoringparameter">
                                             <rank>7</rank>
                                         </item>
-                                        <item id="monitoringcore_id">
-                                            <rank>10</rank>
-                                        </item>
                                         <item id="monitoringprobe_id">
                                             <rank>20</rank>
                                         </item>
@@ -556,9 +531,6 @@
                 </details>
                 <search>
                     <items>
-                        <item id="monitoringcore_id" _delta="define">
-                            <rank>60</rank>
-                        </item>
                         <item id="monitoringprobe_id" _delta="define">
                             <rank>70</rank>
                         </item>
@@ -582,9 +554,6 @@
                                         <item id="monitoringparameter">
                                             <rank>7</rank>
                                         </item>
-                                        <item id="monitoringcore_id">
-                                            <rank>10</rank>
-                                        </item>
                                         <item id="monitoringprobe_id">
                                             <rank>20</rank>
                                         </item>
@@ -599,9 +568,6 @@
                 </details>
                 <search>
                     <items>
-                        <item id="monitoringcore_id" _delta="define">
-                            <rank>150</rank>
-                        </item>
                         <item id="monitoringprobe_id" _delta="define">
                             <rank>160</rank>
                         </item>
@@ -625,9 +591,6 @@
                                         <item id="monitoringparameter">
                                             <rank>7</rank>
                                         </item>
-                                        <item id="monitoringcore_id">
-                                            <rank>10</rank>
-                                        </item>
                                         <item id="monitoringprobe_id">
                                             <rank>20</rank>
                                         </item>
@@ -642,9 +605,6 @@
                 </details>
                 <search>
                     <items>
-                        <item id="monitoringcore_id" _delta="define">
-                            <rank>150</rank>
-                        </item>
                         <item id="monitoringprobe_id" _delta="define">
                             <rank>160</rank>
                         </item>
@@ -665,9 +625,6 @@
                                 <item id="monitoringparameter">
                                     <rank>7</rank>
                                 </item>
-                                <item id="monitoringcore_id">
-                                    <rank>10</rank>
-                                </item>
                                 <item id="monitoringprobe_id">
                                     <rank>20</rank>
                                 </item>
@@ -680,9 +637,6 @@
                 </details>
                 <search>
                     <items>
-                        <item id="monitoringcore_id" _delta="define">
-                            <rank>50</rank>
-                        </item>
                         <item id="monitoringprobe_id" _delta="define">
                             <rank>60</rank>
                         </item>
