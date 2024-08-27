@@ -7,12 +7,16 @@ Copyright (c) 2021-2024 Björn Rudner
 
 Adds the ability to specify monitoring core and probe servers (like in PRTG)
 
+## iTop Compatibility
+
+The extension was tested on iTop 2.7.11 and 3.1.1
+
 ## Attribution
 
 This Extension uses Icons from:
 
-[Business Progress Icon](https://iconscout.com/icons/business-progress) by Popcorn Arts on Iconscout
+![Monitoring Device](images/monitoringdevice.png) by Lima Studio from <https://iconscout.com/icons/analytics>
 
-[Business monitoring Icon](https://iconscout.com/icons/business-monitoring) by Rank Sol on Iconscout
+![Monitoring Probe](images/monitoringprobe.png) by Rank Sol from <https://iconscout.com/icons/business-monitoring>
 
-[Dashboard Icon](https://www.flaticon.com/authors/vectors-market) by Vectors Market from Flaticon
+![Monitoring Core](images/monitoringcore.png) by Nira Studio from <https://iconscout.com/icons/patient-monitor>
