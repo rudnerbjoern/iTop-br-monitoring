@@ -23,7 +23,10 @@
                 <fields_semantic>
                     <state_attribute>status</state_attribute>
                 </fields_semantic>
-                <icon>images/monitoring.png</icon>
+                <style>
+                    <icon>images/monitoringdevice.svg</icon>
+                </style>
+                <icon>images/monitoringdevice.png</icon>
                 <reconciliation>
                     <attributes>
                         <attribute id="name" />
@@ -170,6 +173,12 @@
                         <attribute id="name" />
                     </attributes>
                 </naming>
+                <fields_semantic>
+                    <state_attribute>status</state_attribute>
+                </fields_semantic>
+                <style>
+                    <icon>images/monitoringcore.svg</icon>
+                </style>
                 <icon>images/monitoringcore.png</icon>
                 <reconciliation>
                     <attributes>
@@ -295,7 +304,16 @@
                     <attributes>
                         <attribute id="name" />
                     </attributes>
+                    <complementary_attributes>
+                        <attribute id="monitoringprobe_id" />
+                    </complementary_attributes>
                 </naming>
+                <fields_semantic>
+                    <state_attribute>status</state_attribute>
+                </fields_semantic>
+                <style>
+                    <icon>images/monitoringprobe.svg</icon>
+                </style>
                 <icon>images/monitoringprobe.png</icon>
                 <reconciliation>
                     <attributes>
