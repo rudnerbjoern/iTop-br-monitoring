@@ -321,7 +321,7 @@
                         <attribute id="org_id" />
                         <attribute id="organization_name" />
                         <attribute id="functionalci_id" />
-                        <attribute id="monitoringprobe_id" />
+                        <attribute id="monitoringcore_id" />
                     </attributes>
                 </reconciliation>
                 <order>
