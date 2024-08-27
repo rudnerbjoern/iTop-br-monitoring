@@ -19,6 +19,9 @@
                     <attributes>
                         <attribute id="name" />
                     </attributes>
+                    <complementary_attributes>
+                        <attribute id="functionalci_name" />
+                    </complementary_attributes>
                 </naming>
                 <fields_semantic>
                     <state_attribute>status</state_attribute>
@@ -172,6 +175,9 @@
                     <attributes>
                         <attribute id="name" />
                     </attributes>
+                    <complementary_attributes>
+                        <attribute id="functionalci_name" />
+                    </complementary_attributes>
                 </naming>
                 <fields_semantic>
                     <state_attribute>status</state_attribute>
@@ -305,7 +311,8 @@
                         <attribute id="name" />
                     </attributes>
                     <complementary_attributes>
-                        <attribute id="monitoringprobe_id" />
+                        <attribute id="monitoringcore_name" />
+                        <attribute id="functionalci_name" />
                     </complementary_attributes>
                 </naming>
                 <fields_semantic>
