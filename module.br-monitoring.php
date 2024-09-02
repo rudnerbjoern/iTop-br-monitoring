@@ -3,14 +3,14 @@
 /**
  * @copyright   Copyright (C) 2021-2024 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2024-08-27
+ * @version     2024-09-02
  *
  * iTop module definition file
  */
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-monitoring/0.9.0',
+    'br-monitoring/0.9.1',
     array(
         // Identification
         //
@@ -29,7 +29,9 @@ SetupWebPage::AddModule(
 
         // Components
         //
-        'datamodel' => array(),
+        'datamodel' => array(
+            'model.br-monitoring.php',
+        ),
         'webservice' => array(),
         'data.struct' => array(
             // add your 'structure' definition XML files here,
