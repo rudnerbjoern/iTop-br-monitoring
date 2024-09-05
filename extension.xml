@@ -16,10 +16,10 @@
         <![CDATA[Adds the ability to specify monitoring core and probe servers (like in PRTG).]]>
     </description>
     <version>
-        <![CDATA[0.9.1]]>
+        <![CDATA[2.7.10]]>
     </version>
     <release_date>
-        <![CDATA[2024-09-02]]>
+        <![CDATA[2024-09-05]]>
     </release_date>
     <version_description>
         <![CDATA[]]>
