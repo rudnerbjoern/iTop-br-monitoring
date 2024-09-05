@@ -9,7 +9,13 @@ Adds the ability to specify monitoring core and probe servers (like in PRTG)
 
 ## iTop Compatibility
 
-The extension was tested on iTop 2.7.11 and 3.1.1
+The branch [2.7](https://github.com/rudnerbjoern/iTop-br-monitoring/tree/itop/2.7) is compatible to iTop 2.7 and iTop 3.1.
+
+The branch [main](https://github.com/rudnerbjoern/iTop-br-monitoring/tree/main) will only be compatible to iTop 3.1.
+
+Versions starting with 2.7.x are kept compatible to iTop 2.7
+
+The extension was tested on iTop 2.7.10 and 3.1.1
 
 ## Attribution
 
