@@ -21,8 +21,8 @@ The extension was tested on iTop 2.7.10 and 3.1.1
 
 This Extension uses Icons from:
 
-![Monitoring Device](images/monitoringdevice.png) by Lima Studio from <https://iconscout.com/icons/analytics>
+![Monitoring Device](br-monitoring/images/monitoringdevice.png) by Lima Studio from <https://iconscout.com/icons/analytics>
 
-![Monitoring Probe](images/monitoringprobe.png) by Rank Sol from <https://iconscout.com/icons/business-monitoring>
+![Monitoring Probe](br-monitoring/images/monitoringprobe.png) by Rank Sol from <https://iconscout.com/icons/business-monitoring>
 
-![Monitoring Core](images/monitoringcore.png) by Nira Studio from <https://iconscout.com/icons/patient-monitor>
+![Monitoring Core](br-monitoring/images/monitoringcore.png) by Nira Studio from <https://iconscout.com/icons/patient-monitor>
