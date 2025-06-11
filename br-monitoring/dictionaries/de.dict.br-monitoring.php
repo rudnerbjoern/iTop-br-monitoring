@@ -12,6 +12,8 @@
 /**
  *  Class: Menu, UI
  */
+
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Menu:ConfigManagement:Monitoring' => 'Systemüberwachung',
     'Menu:ConfigManagement:Monitoring+' => 'Systemüberwachung',
@@ -21,6 +23,7 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 /**
  *  Class: FunctionalCI
  */
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:FunctionalCI/Attribute:monitoringstatus' => 'Monitoring Status',
     'Class:FunctionalCI/Attribute:monitoringstatus+' => 'Status der Implementierung der Überwachung',
@@ -45,6 +48,7 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 /**
  *  Class: MonitoringDevice, MonitoringCore, MonitoringProbe
  */
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:MonitoringDevice' => 'Monitoring Gerät',
     'Class:MonitoringDevice+' => 'Ein Gerät, dass dazu verwendet wird, andere Geräte zu überwachen',
@@ -66,6 +70,7 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 /**
  *  Class: NetworkInterface
  */
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:NetworkInterface/Attribute:monitoringstatus' => 'Monitoring Status',
     'Class:NetworkInterface/Attribute:monitoringstatus+' => 'Status der Implementierung der Überwachung',

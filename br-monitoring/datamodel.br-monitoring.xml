@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.1">
+<?xml-model href="https://raw.githubusercontent.com/rudnerbjoern/iTop-schema/refs/heads/main/3.2/itop_design.xsd"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.2">
     <!--
     * @copyright   Copyright (C) 2021-2024 Björn Rudner
     * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -29,7 +30,6 @@
                 <style>
                     <icon>images/monitoringdevice.svg</icon>
                 </style>
-                <icon>images/monitoringdevice.png</icon>
                 <reconciliation>
                     <attributes>
                         <attribute id="name" />
@@ -51,7 +51,6 @@
                     <dependencies>
                         <attribute id="org_id" />
                     </dependencies>
-                    <default_value />
                     <target_class>FunctionalCI</target_class>
                     <is_null_allowed>false</is_null_allowed>
                     <on_target_delete>DEL_MANUAL</on_target_delete>
@@ -185,7 +184,6 @@
                 <style>
                     <icon>images/monitoringcore.svg</icon>
                 </style>
-                <icon>images/monitoringcore.png</icon>
                 <reconciliation>
                     <attributes>
                         <attribute id="name" />
@@ -321,7 +319,6 @@
                 <style>
                     <icon>images/monitoringprobe.svg</icon>
                 </style>
-                <icon>images/monitoringprobe.png</icon>
                 <reconciliation>
                     <attributes>
                         <attribute id="name" />
@@ -496,7 +493,6 @@
                 </field>
                 <field id="monitoringprobe_id" xsi:type="AttributeExternalKey" _delta="define">
                     <sql>monitoringprobe_id</sql>
-                    <default_value />
                     <target_class>MonitoringProbe</target_class>
                     <is_null_allowed>true</is_null_allowed>
                     <on_target_delete>DEL_MANUAL</on_target_delete>
@@ -513,7 +509,6 @@
                         <![CDATA[SELECT IPAddress AS ip WHERE ip.status = 'allocated']]>
                     </filter>
                     <sql>monitoringip_id</sql>
-                    <default_value />
                     <target_class>IPAddress</target_class>
                     <is_null_allowed>true</is_null_allowed>
                     <on_target_delete>DEL_MANUAL</on_target_delete>
@@ -536,7 +531,7 @@
                 </relation>
             </relations>
         </class>
-        <!-- ********************************* Include Monitroing in classes ********************************* -->
+        <!-- ********************************* Include Monitoring in classes ********************************* -->
         <class id="VirtualMachine" _delta="if_exists">
             <presentation>
                 <details>
