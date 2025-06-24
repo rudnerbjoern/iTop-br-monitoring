@@ -9,11 +9,13 @@
         "criticity",
         "dashlet",
         "dashlets",
+        "datacenter",
         "extkey",
         "fieldset",
         "finalclass",
         "friendlyname",
         "functionalci",
+        "mgmt",
         "monitoringcore",
         "monitoringdevice",
         "monitoringip",
@@ -22,6 +24,9 @@
         "monitoringstatus",
         "neighbour",
         "neighbours",
-        "providercontracts"
+        "Nira",
+        "providercontracts",
+        "PRTG",
+        "teemip"
     ]
 }
