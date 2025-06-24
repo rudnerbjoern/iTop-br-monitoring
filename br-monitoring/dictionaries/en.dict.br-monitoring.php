@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @copyright   Copyright (C) 2021-2024 Björn Rudner
+ * @copyright   Copyright (C) 2021-2025 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2024-09-05
+ * @version     2025-06-24
  *
  * Localized data
  */
@@ -12,6 +12,8 @@
 /**
  *  Class: Menu, UI
  */
+
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('EN US', 'English', 'English', array(
     'Menu:ConfigManagement:Monitoring' => 'Monitoring',
     'Menu:ConfigManagement:Monitoring+' => 'Systems monitoring',
@@ -21,6 +23,7 @@ Dict::Add('EN US', 'English', 'English', array(
 /**
  *  Class: FunctionalCI
  */
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('EN US', 'English', 'English', array(
     'Class:FunctionalCI/Attribute:monitoringstatus' => 'Monitoring Status',
     'Class:FunctionalCI/Attribute:monitoringstatus+' => 'Status of the monitoring implementation',
@@ -45,6 +48,7 @@ Dict::Add('EN US', 'English', 'English', array(
 /**
  *  Class: MonitoringDevice, MonitoringCore, MonitoringProbe
  */
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('EN US', 'English', 'English', array(
     'Class:MonitoringDevice' => 'Monitoring Device',
     'Class:MonitoringDevice+' => 'The device (core or probe server) used to monitor other devices',
@@ -66,6 +70,7 @@ Dict::Add('EN US', 'English', 'English', array(
 /**
  *  Class: NetworkInterface
  */
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('EN US', 'English', 'English', array(
     'Class:NetworkInterface/Attribute:monitoringstatus' => 'Monitoring status',
     'Class:NetworkInterface/Attribute:monitoringstatus+' => 'Status of the monitoring implementation',
