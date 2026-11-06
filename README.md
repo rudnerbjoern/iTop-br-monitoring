@@ -26,3 +26,8 @@ This Extension uses Icons from:
 ![Monitoring Probe](br-monitoring/images/monitoringprobe.png) by Rank Sol from <https://iconscout.com/icons/business-monitoring>
 
 ![Monitoring Core](br-monitoring/images/monitoringcore.png) by Nira Studio from <https://iconscout.com/icons/patient-monitor>
+
+## Development
+
+See [tests/README.md](tests/README.md) for module tests and XSD validation,
+and [scripts/README.md](scripts/README.md) for release preparation and packaging.
